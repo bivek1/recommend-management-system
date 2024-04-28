@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+    <h3 class="text-center text-primary searchHead">
+        Search Books
+    </h3>
+    <br><br><br>
+    <div class="row">
+        <div class="col-lg-8 col-12 m-auto">
+            
+        <form class="search-form p-3" method ="post">
+            <div class="searchBox p-3 d-flex">
+            <img src="https://freeiconshop.com/wp-content/uploads/edd/search-var-flat.png" alt="" >
+            <input type="search" class="ms-2" id="search" name="search" placeholder="Search for books">
+            </div>
+            <br>
+            <div class="d-block">
+            <button type="submit" class="btn btn-outline-primary p-2 pt-2">
+                <h3>Search Now</h3>
+            </button>
+            </div>
+        
+        
+        </form>
+        </div>
+        
+    </div>
+
+{% endblock content %}
+
+
