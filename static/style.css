@@ -47,7 +47,7 @@ a{
 
 }
 table{
-   
+    margin: auto;
     border: 1px solid red;
 }
 tr{
@@ -61,4 +61,9 @@ td{
 }
 th{
     padding: 10px;
+}
+
+table img{
+    height: 100px;
+    width: 100%;
 }

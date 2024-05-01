@@ -1,12 +1,12 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 class LogReport(models.Model):
-    name = models.CharField(max_length=200)
-    device = models.CharField(max_length=200)
+   
+    user = models.ForeignKey(User, related_name="user_log", on_delete=models.CASCADE, null = True, blank=True)
     dateTime = models.DateTimeField(auto_now=True)
     product = models.CharField(max_length=200)
-    session = models.CharField(max_length=100)
+ 
 
     def ___str__(self):
-        return self.name
+        return str(self.user.id)

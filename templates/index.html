@@ -49,15 +49,24 @@
 </head>
 <body>
     <nav class="navbar bg-light">
-        <div class="container-fluid">
-          <h5 class="navbar-brand mb-0 h1">  Recoomend Management System</h5>
+        <div class="container-fluid d-flex">
+          <h5 class="navbar-brand mb-0 h1">  Recomendation Management System</h5>
+          
+          {% if user.is_authenticated %}
+          <a href="{%url 'product:logout'%}">
+            <button class="btn btn-danger">Logout</button>
+          </a>
+          {% endif %}
+            
+          
         </div>
+
     </nav>
     <br><br>
     
     {% block content %}
     <h3 class="text-center text-primary searchHead">
-      Search Any Product clothes, bike, and book
+      Search Any Motobike for different suggestion from flipkart
     </h3>
     <br><br><br>
     <div class="row">
@@ -101,6 +110,13 @@
        </form>
       </div>
       
+     
+     {% if data %}
+      <img src="http://127.0.0.1:8000/media/piechart.png" alt="">
+     {% endif %}
+      
+        
+     
       {% if data %}
       <div class="col-12 p-3 m-auto">
         <h1 class="text-center">Your Result</h1>
@@ -110,8 +126,10 @@
       {% endif %}
         
       
+      
     </div>
-    <div class="container">
+    <!-- <div class="container">
+      <img src="/Users/bibekdhakal/DJANGO/recomend/suggest/product/images/698_similarity_chart.png" alt="">
       <div class="row">
         <div class="col-lg-4 col-12 mt-3">
           <a href="{%url 'product:book'%}">
@@ -149,7 +167,7 @@
           </a>
        
       </div>
-    </div>
+    </div> -->
     {% endblock content %}
       
    
